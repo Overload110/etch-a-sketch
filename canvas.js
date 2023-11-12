@@ -8,6 +8,9 @@ for(let i = 0; i < size; i++){
     for(let j = 0; j < size; j++){
         let pixel = document.createElement("div");
         pixel.classList.add("pixel");
+        pixel.addEventListener("mouseover", (event) => {
+            event.target.style.background = 'black';
+        });
         div.appendChild(pixel);
     }
     container.appendChild(div);
@@ -17,12 +20,12 @@ for(let i = 0; i < size; i++){
 function promptNumber(string){
 
     size = prompt(string, 16);
-if(size >0 && size < 9999){
+if(size >0 && size < 101){
     createGrid(size);
-}else{promptNumber("I said a number!");}
+}else{promptNumber("A number under 100!");}
 
 }
 
-promptNumber("Enter a number: ");
+promptNumber("Enter a number under 100: ");
 
 
