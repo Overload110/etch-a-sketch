@@ -14,6 +14,15 @@ for(let i = 0; i < size; i++){
 }
 }
 
-createGrid(size);
+function promptNumber(string){
+
+    size = prompt(string, 16);
+if(size >0 && size < 9999){
+    createGrid(size);
+}else{promptNumber("I said a number!");}
+
+}
+
+promptNumber("Enter a number: ");
 
 
