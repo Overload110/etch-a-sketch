@@ -5,6 +5,11 @@
     flex-direction: column;
 }
 
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .pixel, .row{
     background-color: white;
