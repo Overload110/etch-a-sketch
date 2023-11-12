@@ -9,13 +9,22 @@ for(let i = 0; i < size; i++){
         let pixel = document.createElement("div");
         pixel.classList.add("pixel");
         pixel.addEventListener("mouseover", (event) => {
-            event.target.style.background = 'black';
+            event.target.style.background = getRandomColor();
         });
         div.appendChild(pixel);
     }
     container.appendChild(div);
 }
 }
+
+function getRandomColor() {
+    let letters = '0123456789ABCDEF';
+    let color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
 
 function promptNumber(string = "Enter a number under 100: "){
 
